@@ -12,18 +12,21 @@ public class AccountMapRepository implements AccountRepository {
 
 	Map<Long, Account> accountMap = new HashMap<>();
 
+	
+	
+
 	public String getAllAccounts() {
 
 		return util.getJSONForObject(accountMap.values());
 	}
-
+	
 	public String createAccount(String account) {
 
 		Account newAccount = util.getObjectForJSON(account, Account.class);
 
 		accountMap.put(newAccount.getId(), newAccount);
 
-		return "Done";
+		return "Account created";
 	}
 
 	public String deleteAccount(Long id) {
@@ -41,5 +44,6 @@ public class AccountMapRepository implements AccountRepository {
 
 		return "Account updated";
 	}
+	
 
 }

@@ -2,7 +2,7 @@ package com.qa.persistence.domain;
 
 public class Account {
 
-	Long id;
+	private Long id;
 	private String fName;
 	private String sName;
 
